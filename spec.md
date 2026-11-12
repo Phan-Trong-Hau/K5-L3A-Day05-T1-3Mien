@@ -3,8 +3,6 @@
 **Trạng thái:** Khung bài, chưa hoàn thành.
 **Lớp:** L3A · **Bàn / zone:** Chưa bổ sung · **Track:** T1
 
-Họ tên và mã học viên đã đối chiếu với TEAM.md của Lab 2 và Lab 3. Bổ sung phần việc thực tế trước khi nộp.
-
 | Họ và Tên | Mã Học Viên | Việc đã làm |
 |---|---|---|
 | Phan Trọng Hậu | 2A202603547 | Chưa ghi nhận |

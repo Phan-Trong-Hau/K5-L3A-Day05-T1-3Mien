@@ -8,8 +8,6 @@
 | Ngô Đức Thịnh | 2A202603548 |
 | Bùi Gia Huy | 2A202603525 |
 
-Thông tin đã đối chiếu với TEAM.md của Lab 2 và Lab 3.
-
 **Lớp:** L3A.  
 **Trạng thái:** Khởi tạo khung bài, chưa hoàn thành spec và prototype.
 
