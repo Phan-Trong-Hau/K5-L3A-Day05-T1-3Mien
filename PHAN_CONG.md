@@ -1,6 +1,6 @@
 # Phân công LAB5 — Nhóm 3 miền · L3A · T1 Y tế
 
-**Trạng thái:** Kế hoạch phân công; chưa phải xác nhận công việc đã hoàn thành.
+**Trạng thái:** Hậu đã dựng prototype, viết §5, tạo 2 ảnh render và chạy 17 kiểm tra logic/DOM. Chưa kiểm tra trên trình duyệt thật; phần của Thịnh và Huy chờ hoàn thiện.
 
 ## Phụ trách chính
 
@@ -54,7 +54,8 @@ Người phụ trách chính tổng hợp và sửa phần mình. Cả ba cùng 
 
 - [ ] Thịnh: §1–3 đủ bằng chứng và lập luận chọn/loại.
 - [ ] Huy: §4 đủ 5 tool và thử 3 ca; §6 có kết quả thật; §7 được cập nhật sau demo.
-- [ ] Hậu: prototype mở và bấm được; ảnh có đánh số, §5 khớp giao diện.
+- [x] Hậu: đã dựng prototype, tạo ảnh render đánh số và viết §5; logic/DOM đạt 17/17.
+- [ ] Hậu: bấm thử trên trình duyệt thật; kiểm tra responsive, focus/scroll và hẹn giờ 2 phút.
 - [ ] Cả nhóm: đối chiếu spec với prototype, rà quy tắc T1 và không dùng dữ liệu sức khoẻ thật/API key trong repo.
 - [ ] Mỗi người cập nhật cột “Việc đã làm” ở đầu `spec.md` bằng đóng góp thực tế.
 - [ ] Hậu chuẩn bị link repo công khai để nộp trước **23:59 ngày 12/11/2026** theo kênh giảng viên thông báo.

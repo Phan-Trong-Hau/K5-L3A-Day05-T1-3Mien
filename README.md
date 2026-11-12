@@ -9,11 +9,15 @@
 | Bùi Gia Huy | 2A202603525 |
 
 **Lớp:** L3A.  
-**Trạng thái:** Khởi tạo khung bài, chưa hoàn thành spec và prototype.
+**Trạng thái:** Đã có prototype hai màn hình và §5. Các phần thiết kế của Thịnh, Huy đang chờ hoàn thiện.
 
 ## Phân công
 
 Xem [phân công chi tiết](PHAN_CONG.md): **Hậu** phụ trách prototype và tích hợp; **Thịnh** phụ trách phạm vi, kịch bản và UX khi sai; **Huy** phụ trách mức tự chủ, kiểm tra và kịch bản demo. Đây là kế hoạch; đóng góp thực tế ghi ở đầu `spec.md`.
+
+## Chạy prototype
+
+Mở [`prototype/index.html`](prototype/index.html) trong trình duyệt, không cần cài đặt. Xem [hướng dẫn bấm thử, ảnh và giới hạn kiểm tra](prototype/README.md).
 
 ## Hiểu đề
 
@@ -48,7 +52,7 @@ Theo quy tắc track: không tự nói liều; không tự bán/gợi ý thuốc
 ## Trước khi nộp
 
 - Bổ sung bàn / zone và việc thực tế từng người.
-- Hoàn thiện spec, prototype và ảnh. Khung hiện tại chưa đủ điều kiện nộp.
+- Hoàn thiện §1–4, §6–7; đối chiếu quyết định với prototype và bấm thử trên trình duyệt trước khi nộp.
 - Repo công khai, nộp link theo kênh giảng viên thông báo.
 - Hạn L3A: 23:59 ngày 12/11/2026; L3B: 23:59 ngày 13/11/2026.
 

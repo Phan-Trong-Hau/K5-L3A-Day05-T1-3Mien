@@ -1,0 +1,12 @@
+{
+  "name": "lab5-3mien-prototype",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Kiểm tra prototype LAB5 T1 của nhóm 3 miền; mở HTML không cần cài npm.",
+  "scripts": {
+    "test": "node --test prototype/tests/*.test.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "^29.1.1"
+  }
+}
