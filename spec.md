@@ -3,13 +3,13 @@
 **Trạng thái:** Khung bài, chưa hoàn thành.
 **Lớp:** L3A · **Bàn / zone:** Chưa bổ sung · **Track:** T1
 
-Bổ sung họ tên đầy đủ, mã học viên đúng và phần việc thực tế trước khi nộp.
+Họ tên và mã học viên đã đối chiếu với TEAM.md của Lab 2 và Lab 3. Bổ sung phần việc thực tế trước khi nộp.
 
 | Họ và Tên | Mã Học Viên | Việc đã làm |
 |---|---|---|
-| Hậu | Chưa bổ sung | Chưa ghi nhận |
-| Thịnh | Chưa bổ sung | Chưa ghi nhận |
-| Huy | Chưa bổ sung | Chưa ghi nhận |
+| Phan Trọng Hậu | 2A202603547 | Chưa ghi nhận |
+| Ngô Đức Thịnh | 2A202603548 | Chưa ghi nhận |
+| Bùi Gia Huy | 2A202603525 | Chưa ghi nhận |
 
 
 ## §1. Lát cắt & phạm vi

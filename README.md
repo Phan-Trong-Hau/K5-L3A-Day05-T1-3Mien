@@ -1,6 +1,15 @@
 # LAB5 — Nhóm 3 miền · Track 1: Y tế
 
-**Thành viên:** Hậu, Thịnh, Huy.  
+**Thành viên:**
+
+| Họ và tên | Mã học viên |
+|---|---|
+| Phan Trọng Hậu | 2A202603547 |
+| Ngô Đức Thịnh | 2A202603548 |
+| Bùi Gia Huy | 2A202603525 |
+
+Thông tin đã đối chiếu với TEAM.md của Lab 2 và Lab 3.
+
 **Lớp:** L3A.  
 **Trạng thái:** Khởi tạo khung bài, chưa hoàn thành spec và prototype.
 
@@ -36,7 +45,7 @@ Theo quy tắc track: không tự nói liều; không tự bán/gợi ý thuốc
 
 ## Trước khi nộp
 
-- Bổ sung họ tên đầy đủ, mã học viên chính xác, lớp/bàn và việc thực tế từng người.
+- Bổ sung bàn / zone và việc thực tế từng người.
 - Hoàn thiện spec, prototype và ảnh. Khung hiện tại chưa đủ điều kiện nộp.
 - Repo công khai, nộp link theo kênh giảng viên thông báo.
 - Hạn L3A: 23:59 ngày 12/11/2026; L3B: 23:59 ngày 13/11/2026.
