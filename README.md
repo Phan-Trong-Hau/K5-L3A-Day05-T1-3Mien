@@ -13,7 +13,7 @@
 
 ## Phân công
 
-Xem [phân công chi tiết](PHAN_CONG.md): **Hậu** phụ trách prototype và tích hợp; **Thịnh** phụ trách phạm vi, kịch bản và UX khi sai; **Huy** phụ trách mức tự chủ, kiểm tra và kịch bản demo. Đây là kế hoạch; đóng góp thực tế ghi ở đầu `spec.md`.
+Xem [phân công chi tiết](TASKS.md): **Hậu** phụ trách prototype và tích hợp; **Thịnh** phụ trách phạm vi, kịch bản và UX khi sai; **Huy** phụ trách mức tự chủ, kiểm tra và kịch bản demo. Đây là kế hoạch; đóng góp thực tế ghi ở đầu `spec.md`.
 
 ## Chạy prototype
 

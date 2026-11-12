@@ -9,7 +9,7 @@ let review=dispatch(initial(),'submit',{text:presets.child});
 review=dispatch(review,'profile',{profile:{patient:'Con của người nhắn (dữ liệu giả)',age:'2 tuổi',history:'Chưa rõ thuốc đã dùng và dị ứng'}});
 review=dispatch(review,'transfer');review=dispatch(review,'accept');review=dispatch(review,'draft');review=dispatch(review,'view',{view:'pharmacist'});
 const css=fs.readFileSync(path.join(__dirname,'../styles.css'),'utf8');
-for(const [name,state] of [['01-nguy-hiem',danger],['02-duoc-si-duyet',review]]){
+for(const [name,state] of [['01-emergency',danger],['02-pharmacist-review',review]]){
  const html=`<!doctype html><html lang="vi"><meta charset="utf-8"><title>${name}</title><style>${css}</style><body>${render(state)}<p style="position:fixed;bottom:4px;left:30px;font-size:11px;color:#526d68">Ảnh render tĩnh từ HTML/CSS của prototype · Các số 1–6 trỏ tới spec.md §5 · Không phải ảnh chụp trình duyệt.</p></body></html>`;
  fs.writeFileSync(path.join(out,name+'.html'),html);
 }

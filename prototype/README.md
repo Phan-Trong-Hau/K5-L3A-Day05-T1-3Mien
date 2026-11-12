@@ -43,9 +43,9 @@ Có đúng hai màn hình: **Khách hàng** và **Dược sĩ · demo**. Thanh �
 
 Đây là **ảnh render tĩnh từ cùng hàm HTML và CSS của prototype**, có điều chỉnh bố cục in; không phải ảnh chụp trình duyệt và không xác minh tương tác trên trình duyệt.
 
-![Ca nguy hiểm — các vị trí 1 đến 5](images/01-nguy-hiem.png)
+![Ca nguy hiểm — các vị trí 1 đến 5](images/01-emergency.png)
 
-![Dược sĩ duyệt phản hồi — vị trí 6](images/02-duoc-si-duyet.png)
+![Dược sĩ duyệt phản hồi — vị trí 6](images/02-pharmacist-review.png)
 
 Ánh xạ từng số và lý do thiết kế ở [`spec.md` §5](../spec.md#5-prototype--chặng-5).
 
