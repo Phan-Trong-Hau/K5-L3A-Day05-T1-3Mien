@@ -11,6 +11,7 @@ Họ tên và mã học viên đã đối chiếu với TEAM.md của Lab 2 và 
 | Ngô Đức Thịnh | 2A202603548 | Chưa ghi nhận |
 | Bùi Gia Huy | 2A202603525 | Chưa ghi nhận |
 
+**Phân công dự kiến:** Hậu — prototype, tích hợp và §5; Thịnh — phạm vi, kịch bản, UX khi sai (§1–3); Huy — mức tự chủ, kiểm tra và demo (§4, §6–7). Cả nhóm cùng chốt quyết định. Xem [kế hoạch chi tiết](PHAN_CONG.md); bảng trên chỉ cập nhật việc thực tế đã làm.
 
 ## §1. Lát cắt & phạm vi
 - **Lát cắt được giao:** Trong **kênh chat Hỏi dược sĩ của Pharmacity**, khi **khách** đang nhắn hỏi "tôi (hoặc người nhà) bị X, có thuốc gì không", **AI tự trả lời và gợi ý sản phẩm, hỏi thêm câu sàng lọc, hay chuyển dược sĩ, khuyên đi khám ngay**, để người dùng thuốc không nhận sai sản phẩm và ca nguy hiểm không nằm trong hàng chờ.

@@ -13,6 +13,10 @@ Thông tin đã đối chiếu với TEAM.md của Lab 2 và Lab 3.
 **Lớp:** L3A.  
 **Trạng thái:** Khởi tạo khung bài, chưa hoàn thành spec và prototype.
 
+## Phân công
+
+Xem [phân công chi tiết](PHAN_CONG.md): **Hậu** phụ trách prototype và tích hợp; **Thịnh** phụ trách phạm vi, kịch bản và UX khi sai; **Huy** phụ trách mức tự chủ, kiểm tra và kịch bản demo. Đây là kế hoạch; đóng góp thực tế ghi ở đầu `spec.md`.
+
 ## Hiểu đề
 
 Thiết kế trợ lý trả lời đầu tiên trong kênh Hỏi dược sĩ của Pharmacity. Khi khách hỏi thuốc cho mình hoặc người nhà, AI quyết định hỏi sàng lọc, gợi ý sản phẩm, chuyển dược sĩ hoặc khuyên đi khám ngay. Trọng tâm là lúc AI sai thì người dùng thấy gì, và AI được tự làm đến đâu.
