@@ -56,3 +56,52 @@ test('DOM: bổ sung dấu hiệu nguy hiểm trong biểu mẫu phải dừng c
   assert.equal(d.window.document.querySelector('[data-action="transfer"]'),null);
  }finally{d.window.close();}
 });
+
+
+test('DOM: K1 tự chuyển, K2 thay thế ca và hiển thị đúng cảnh báo',()=>{
+ const d=mount();try{
+  click(d,'[data-preset="pregnancy"]');assert.match(text(d),/Đã chuyển · Chờ dược sĩ nhận/);
+  click(d,'[data-view="pharmacist"]');assert.match(text(d),/Thai kỳ · Chuyển tự động/);
+  click(d,'[data-view="customer"]');click(d,'[data-preset="danger"]');
+  assert.ok(d.window.document.querySelector('[role="alert"]'));
+  assert.match(text(d),/khò khè/);assert.match(text(d),/li bì/);
+  assert.equal(d.window.document.querySelector('[data-action="transfer"]'),null);
+  click(d,'[data-view="pharmacist"]');assert.match(text(d),/Chưa có ca trong hàng chờ/);
+ }finally{d.window.close();}
+});
+test('DOM: hạn chờ được đặt lại khi ca K1 thay đổi, nhưng không khi gửi tin trống',()=>{
+ const d=mount();try{
+  const jobs=new Map();let seq=0;
+  d.window.setTimeout=(fn,ms)=>{assert.equal(ms,120000);jobs.set(++seq,fn);return seq;};
+  d.window.clearTimeout=id=>jobs.delete(id);
+  click(d,'[data-preset="pregnancy"]');assert.equal(jobs.size,1);const oldId=seq;
+  click(d,'[data-preset="pregnancy"]');assert.equal(jobs.size,1);assert.equal(jobs.has(oldId),false);
+  const newId=seq;
+  d.window.document.querySelector('#message').value='   ';submit(d,'#chat-form');
+  assert.equal(seq,newId);assert.equal(jobs.size,1);
+  jobs.get(newId)();assert.match(text(d),/Chưa có dược sĩ phản hồi/);
+  click(d,'[data-action="retry"]');assert.equal(jobs.size,1);assert.ok(seq>newId);
+  click(d,'[data-preset="danger"]');assert.equal(jobs.size,0);
+ }finally{d.window.close();}
+});
+test('DOM: K8 chỉ lưu sau đồng ý riêng và cho xoá ghi chú',()=>{
+ const d=mount();try{
+  click(d,'[data-preset="privacy"]');const doc=d.window.document;
+  assert.match(text(d),/Xem nội dung ghi chú/);
+  assert.equal(doc.querySelector('[data-action="save"]').disabled,true);
+  const consent=doc.querySelector('#consent');consent.checked=true;
+  consent.dispatchEvent(new d.window.Event('change',{bubbles:true}));
+  click(d,'[data-action="save"]');assert.match(text(d),/Ghi chú đã lưu/);
+  click(d,'[data-action="deleteNote"]');assert.equal(doc.querySelector('#consent').checked,false);
+ }finally{d.window.close();}
+});
+
+
+test('DOM: vai dược sĩ không thể đồng ý lưu thay khách',()=>{
+ const d=mount();try{
+  click(d,'[data-preset="pregnancy"]');click(d,'[data-view="pharmacist"]');
+  assert.equal(d.window.document.querySelector('#consent'),null);
+  assert.equal(d.window.document.querySelector('[data-action="save"]'),null);
+  assert.match(text(d),/Khách chưa lưu ghi chú/);
+ }finally{d.window.close();}
+});

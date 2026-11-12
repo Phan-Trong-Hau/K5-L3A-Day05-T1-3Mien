@@ -14,8 +14,8 @@ test('Dấu hiệu nguy hiểm ưu tiên hơn yêu cầu mua thuốc, trẻ nh�
   const ui=render(s);assert.match(ui,/Không xếp hàng/);assert.doesNotMatch(ui,/data-action="transfer"|id="approve-form"/);
  }
 });
-test('Trẻ nhỏ, thai kỳ và thiếu dữ kiện không nhận gợi ý tự động',()=>{
- for(const text of [presets.child,presets.pregnancy,'Đau họng 2 ngày, uống gì?']){
+test('Trẻ nhỏ và thiếu dữ kiện không nhận gợi ý tự động',()=>{
+ for(const text of [presets.child,'Đau họng 2 ngày, uống gì?']){
   const s=submit(text);assert.ok(['vulnerable','unknown'].includes(s.route));assert.equal(s.reply,'');
   assert.match(render(s),/Chuyển dược sĩ/);
  }
@@ -79,4 +79,32 @@ test('Thông tin bổ sung có dấu hiệu nguy hiểm phải đổi luồng ng
  s=act(s,'profile',{profile:{patient:'Con',age:'2 tuổi',history:'Đang khó thở'}});
  assert.equal(s.route,'danger');assert.equal(act(s,'transfer').stage,'new');
  assert.doesNotMatch(render(s),/data-action="transfer"/);
+});
+
+
+test('K1 thai kỳ tự chuyển, có thể huỷ và chuyển lại; không hứa tiếp tục chờ sau huỷ',()=>{
+ let s=submit(presets.pregnancy);assert.equal(s.route,'pregnancy');assert.equal(s.stage,'queued');
+ assert.match(render({...s,view:'pharmacist'}),/Thai kỳ · Chuyển tự động/);
+ s=act(s,'undo');assert.equal(s.stage,'new');assert.match(render(s),/Bạn đã huỷ chuyển ca/);
+ assert.doesNotMatch(render(s),/Mình đã chuyển ca mô phỏng sang dược sĩ/);
+ assert.equal(act(s,'transfer').stage,'queued');
+});
+test('Cập nhật K1 có nguy hiểm phải bỏ hàng chờ và bản duyệt',()=>{
+ let s=act(submit(presets.pregnancy),'accept');s=act(s,'draft');
+ s=act(s,'profile',{profile:{patient:'Người nhắn',age:'Chưa rõ',history:'Khó thở'}});
+ assert.equal(s.route,'danger');assert.equal(s.stage,'new');assert.equal(s.draft,false);
+});
+test('Report và prototype dùng đúng tám tin nhắn và hai lời AI trọng tâm',()=>{
+ const {readFileSync}=require('node:fs');const {copy}=require('../app.js');
+ const spec=readFileSync(require('node:path').join(__dirname,'../../spec.md'),'utf8');
+ for(const [key,route] of Object.entries({pregnancy:'pregnancy',danger:'danger',rx:'rx',throat:'unknown',chest:'danger',normal:'info',prolonged:'vulnerable',privacy:'privacy'})){
+  assert.ok(spec.includes('“'+presets[key]+'”'),key+' phải trùng nguyên văn report');
+  assert.equal(classify(presets[key]),route,key);
+ }
+ assert.ok(spec.includes(copy.emergency));assert.ok(spec.includes(copy.pregnancyQueued));
+});
+test('K8 không vào hàng chờ, cho xem nội dung ghi chú trước khi đồng ý',()=>{
+ let s=submit(presets.privacy);assert.equal(s.route,'privacy');
+ assert.match(render(s),/Xem nội dung ghi chú/);assert.doesNotMatch(render(s),/data-action="transfer"/);
+ assert.equal(act(s,'transfer').stage,'new');assert.equal(act(s,'save').note,false);
 });

@@ -9,7 +9,7 @@
 | Bùi Gia Huy | 2A202603525 |
 
 **Lớp:** L3A.  
-**Trạng thái:** Đã có prototype hai màn hình và §5. Các phần thiết kế của Thịnh, Huy đang chờ hoàn thiện.
+**Trạng thái:** Đã có prototype hai màn hình và §5. §1–3 đã đồng bộ với giao diện và §5; §4, §6 chờ hoàn thiện, §7 cập nhật sau demo.
 
 ## Phân công
 
@@ -52,7 +52,7 @@ Theo quy tắc track: không tự nói liều; không tự bán/gợi ý thuốc
 ## Trước khi nộp
 
 - Bổ sung bàn / zone và việc thực tế từng người.
-- Hoàn thiện §1–4, §6–7; đối chiếu quyết định với prototype và bấm thử trên trình duyệt trước khi nộp.
+- Hoàn thiện §4, §6; ghi §7 sau demo; bấm thử trên trình duyệt trước khi nộp.
 - Repo công khai, nộp link theo kênh giảng viên thông báo.
 - Hạn L3A: 23:59 ngày 12/11/2026; L3B: 23:59 ngày 13/11/2026.
 
