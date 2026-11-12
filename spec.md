@@ -1,7 +1,7 @@
 # Bài nộp LAB5 — T1 — Y tế · Nhóm 3 miền
 
 **Trạng thái:** §1–6 và kịch bản §7.1 đã đồng bộ với prototype. Còn xác nhận ý kiến cá nhân ở §4.3, bấm thử trên trình duyệt và ghi ca lạ sau demo (§7.2).
-**Lớp:** L3A · **Bàn / zone:** Chưa bổ sung · **Track:** T1
+**Lớp:** L3A · **Zone:** 3 · **Bàn:** 4 · **Track:** T1
 
 | Họ và Tên | Mã Học Viên | Việc đã làm |
 |---|---|---|
