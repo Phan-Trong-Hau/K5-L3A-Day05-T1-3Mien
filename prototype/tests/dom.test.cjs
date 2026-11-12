@@ -105,3 +105,48 @@ test('DOM: vai dược sĩ không thể đồng ý lưu thay khách',()=>{
   assert.match(text(d),/Khách chưa lưu ghi chú/);
  }finally{d.window.close();}
 });
+
+test('DOM: TC1–TC3 trên K1, duyệt rồi sửa nguy hiểm huỷ phản hồi và consent',()=>{
+ const d=mount();try{
+  click(d,'[data-preset="pregnancy"]');const doc=d.window.document;
+  assert.equal(doc.querySelector('[role="alert"]'),null);
+  assert.match(text(d),/Đã chuyển · Chờ dược sĩ nhận/);
+  click(d,'[data-view="pharmacist"]');click(d,'[data-action="accept"]');click(d,'[data-action="draft"]');
+  assert.equal(doc.querySelector('#approve-form button').disabled,false);
+  assert.equal(doc.querySelector('#review-confirm').required,true);
+  submit(d,'#approve-form');assert.ok(doc.querySelector('#approve-form'));
+  const reply=doc.querySelector('#reply').value;
+  doc.querySelector('#review-confirm').checked=true;submit(d,'#approve-form');
+  click(d,'[data-view="customer"]');assert.ok(text(d).includes(reply));
+  const consent=doc.querySelector('#consent');consent.checked=true;
+  consent.dispatchEvent(new d.window.Event('change',{bubbles:true}));
+  click(d,'[data-action="save"]');assert.match(text(d),/Ghi chú đã lưu/);
+  click(d,'[data-action="edit"]');doc.querySelector('#message').value+=' Hiện đang khó thở.';submit(d,'#chat-form');
+  assert.ok(doc.querySelector('[role="alert"]'));assert.ok(!text(d).includes(reply));
+  assert.equal(doc.querySelector('#consent').checked,false);
+  assert.equal(doc.querySelector('[data-action="save"]').disabled,true);
+  assert.equal(doc.querySelector('[data-action="deleteNote"]'),null);
+  click(d,'[data-view="pharmacist"]');assert.match(text(d),/Chưa có ca trong hàng chờ/);
+ }finally{d.window.close();}
+});
+
+test('DOM: TC1/TC3 trên K2, ghi chú độc lập không tạo ca chờ và sửa tin xoá consent',()=>{
+ const d=mount();try{
+  click(d,'[data-preset="danger"]');const doc=d.window.document;
+  assert.ok(doc.querySelector('[role="alert"]'));
+  assert.equal(doc.querySelector('[data-action="transfer"]'),null);
+  assert.equal(doc.querySelector('[data-action="save"]').disabled,true);
+  const consent=doc.querySelector('#consent');consent.checked=true;
+  consent.dispatchEvent(new d.window.Event('change',{bubbles:true}));
+  click(d,'[data-action="save"]');assert.match(text(d),/Ghi chú đã lưu/);
+  assert.ok(doc.querySelector('[data-action="deleteNote"]'));
+  click(d,'[data-view="pharmacist"]');assert.match(text(d),/Chưa có ca trong hàng chờ/);
+  assert.equal(doc.querySelector('#approve-form'),null);
+  click(d,'[data-view="customer"]');click(d,'[data-action="edit"]');
+  doc.querySelector('#message').value='Mình chỉ hỏi thông tin tồn kho nước muối.';submit(d,'#chat-form');
+  assert.equal(doc.querySelector('[role="alert"]'),null);
+  assert.equal(doc.querySelector('#consent').checked,false);
+  assert.equal(doc.querySelector('[data-action="deleteNote"]'),null);
+  assert.equal(doc.querySelector('[data-action="save"]').disabled,true);
+ }finally{d.window.close();}
+});

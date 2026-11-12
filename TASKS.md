@@ -1,6 +1,6 @@
 # Phân công LAB5 — Nhóm 3 miền · L3A · T1 Y tế
 
-**Trạng thái:** §1–3 và prototype/§5 đã đồng bộ; 2 ảnh render cập nhật theo K1/K2, 25 kiểm tra logic/DOM đạt. Chưa kiểm tra trên trình duyệt thật; §4, §6 chờ hoàn thiện, §7 cập nhật sau demo.
+**Trạng thái:** §1–6 và kịch bản §7.1 đã đồng bộ với UI; 27 kiểm tra logic/DOM đạt. Còn xác nhận ý kiến cá nhân §4.3, kiểm tra trình duyệt thật và ghi ca lạ §7.2 sau demo.
 
 ## Phụ trách chính
 
@@ -53,9 +53,12 @@ Người phụ trách chính tổng hợp và sửa phần mình. Cả ba cùng 
 ## Hoàn tất trước khi nộp
 
 - [x] §1–3: đã có 8 kịch bản, hai ca sâu, nguyên tắc và nội dung khớp prototype.
-- [ ] Huy: §4 đủ 5 tool và thử 3 ca; §6 có kết quả thật; §7 được cập nhật sau demo.
-- [x] Hậu: đã dựng prototype, tạo ảnh render đánh số và viết §5; logic/DOM đạt 25/25.
+- [x] §4 và §6: đủ 5 tool + 2 thao tác tách, đối chiếu K1/K2/K6, có tiêu chí và kết quả logic/DOM.
+- [x] §7.1: trình tự demo Thịnh → Huy → Hậu, khớp nút K1/K2 hiện tại.
+- [ ] Mỗi thành viên tự xác nhận lựa chọn ban đầu và lý do ở §4.3.
+- [ ] Sau demo: ghi ca lạ và kết quả thực tế ở §7.2.
+- [x] Hậu: đã dựng prototype, tạo ảnh render đánh số và viết §5; logic/DOM đạt 27/27.
 - [ ] Hậu: bấm thử trên trình duyệt thật; kiểm tra responsive, focus/scroll và hẹn giờ 2 phút.
-- [ ] Cả nhóm: đối chiếu spec với prototype, rà quy tắc T1 và không dùng dữ liệu sức khoẻ thật/API key trong repo.
-- [ ] Mỗi người cập nhật cột “Việc đã làm” ở đầu `spec.md` bằng đóng góp thực tế.
+- [x] Đã đối chiếu spec với prototype và rà giới hạn mock; không có dữ liệu sức khoẻ thật/API key trong repo.
+- [x] Bảng thành viên đã có đóng góp của cả ba; cập nhật tiếp nếu phát sinh việc thực tế.
 - [ ] Hậu chuẩn bị link repo công khai để nộp trước **23:59 ngày 12/11/2026** theo kênh giảng viên thông báo.

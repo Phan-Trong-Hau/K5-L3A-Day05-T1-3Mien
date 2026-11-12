@@ -9,11 +9,11 @@
 | Bùi Gia Huy | 2A202603525 |
 
 **Lớp:** L3A.  
-**Trạng thái:** Đã có prototype hai màn hình và §5. §1–3 đã đồng bộ với giao diện và §5; §4, §6 chờ hoàn thiện, §7 cập nhật sau demo.
+**Trạng thái:** §1–6 và kịch bản §7.1 đã đồng bộ với prototype; còn xác nhận ý kiến từng thành viên (§4.3), kiểm tra trình duyệt và ghi ca lạ sau demo (§7.2).
 
 ## Phân công
 
-Xem [phân công chi tiết](TASKS.md): **Hậu** phụ trách prototype và tích hợp; **Thịnh** phụ trách phạm vi, kịch bản và UX khi sai; **Huy** phụ trách mức tự chủ, kiểm tra và kịch bản demo. Đây là kế hoạch; đóng góp thực tế ghi ở đầu `spec.md`.
+Xem [phân công chi tiết](TASKS.md): **Hậu** phụ trách prototype và tích hợp; **Thịnh** phụ trách phạm vi, kịch bản và UX khi sai; **Huy** phụ trách mức tự chủ, kiểm tra và kịch bản demo. Đóng góp đã ghi ở đầu `spec.md`; trình tự demo chung: Thịnh → Huy → Hậu → cả nhóm nhận ca lạ (§7.1).
 
 ## Chạy prototype
 
@@ -52,7 +52,7 @@ Theo quy tắc track: không tự nói liều; không tự bán/gợi ý thuốc
 ## Trước khi nộp
 
 - Bổ sung bàn / zone và việc thực tế từng người.
-- Hoàn thiện §4, §6; ghi §7 sau demo; bấm thử trên trình duyệt trước khi nộp.
+- Mỗi thành viên xác nhận lựa chọn thật ở §4.3; bấm thử trình duyệt; ghi ca lạ ở §7.2 sau demo.
 - Repo công khai, nộp link theo kênh giảng viên thông báo.
 - Hạn L3A: 23:59 ngày 12/11/2026; L3B: 23:59 ngày 13/11/2026.
 

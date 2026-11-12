@@ -20,7 +20,7 @@ Có đúng hai màn hình: **Khách hàng** và **Dược sĩ · demo**. Thanh �
 2. Ca tự chuyển sang dược sĩ mô phỏng; thẻ hiện nhãn thai kỳ và hạn demo 2 phút. Không có gợi ý thuốc. Có thể **Huỷ chuyển ca** trước khi nhận rồi bấm chuyển lại.
 3. Có thể bổ sung/sửa dữ kiện. Hệ thống đánh giá lại, huỷ bản duyệt cũ và khởi động lại hạn chờ của ca mới; nếu thêm dấu hiệu nguy hiểm thì chuyển hẳn sang cảnh báo.
 4. Mở **Dược sĩ · demo** → **Nhận ca mô phỏng** → **Soạn phản hồi sàng lọc**.
-5. Kiểm tra bản nháp, tích xác nhận → **Duyệt & gửi phản hồi mô phỏng**.
+5. Nút gửi vẫn hiện nhưng biểu mẫu và logic chặn gửi khi chưa xác nhận. Kiểm tra bản nháp, tích xác nhận → **Duyệt & gửi phản hồi mô phỏng**.
 6. Quay lại **Khách hàng**, thấy phản hồi đã duyệt. Không có đơn hàng hoặc gợi ý thuốc được tạo.
 
 ### K2 — Trẻ khò khè, li bì hỏi siro
@@ -57,13 +57,13 @@ Tám nút K1–K8 tương ứng tám dòng report. Nút **Ca thêm · Trẻ số
 - Dược sĩ, hàng chờ, hạn 2 phút, chuyển ca, duyệt và lưu ghi chú đều là mô phỏng trên một trang. Hạn 2 phút là lựa chọn demo, không phải cam kết của Pharmacity.
 - Không có phân quyền thật; nút đổi vai chỉ phục vụ demo. Không dùng mô hình này để triển khai hồ sơ sức khoẻ thật.
 - Không kết nối Pharmacity, tồn kho, đơn hàng hay dịch vụ cấp cứu. Không có thuốc thật, liều dùng hoặc chức năng mua hàng.
-- Luồng duyệt minh hoạ **phản hồi sàng lọc**, chưa có màn hình dược sĩ chọn sản phẩm. Quyền cho `goi_y_san_pham` cần Huy chốt trong §4.
+- Luồng duyệt minh hoạ **phản hồi sàng lọc**, chưa có màn hình dược sĩ chọn sản phẩm. Chính sách §4 yêu cầu dược sĩ duyệt `goi_y_san_pham`; chức năng chọn/gửi sản phẩm chưa được triển khai, không tính như đã thử thành công.
 
 ## Giới hạn và bàn giao
 
 Bộ lọc không hiểu đầy đủ phủ định, tiếng lóng hoặc mọi dấu hiệu y tế. Ví dụ “không khó thở” vẫn có thể kích hoạt cảnh báo; câu diễn đạt khác có thể bị bỏ sót. Ca không nhận diện được luôn đi đường hỏi lại/chuyển người, nhưng điều đó **không bảo đảm phát hiện cấp cứu**. Đây là giới hạn demo, không phải hệ thống phân loại y tế dùng thật.
 
-Câu chữ, K1–K8, ba nguyên tắc G1/G10/G9 và hạn demo 2 phút đã thống nhất giữa §1–3, §5 và giao diện. §4 và §6 còn chờ phần lập luận/tiêu chí của nhóm; không tự ghi lịch sử thảo luận hay kết quả demo chưa diễn ra.
+Câu chữ, K1–K8, quyền tool, ba nguyên tắc G1/G10/G9 và hạn demo hai phút khớp §1–6. Trình tự demo chung ở §7.1: Thịnh → Huy → Hậu → cả nhóm nhận ca lạ. Ý kiến cá nhân §4.3 cần từng người xác nhận; §7.2 chỉ ghi sau demo.
 
 ## Kiểm tra kỹ thuật
 
@@ -72,7 +72,7 @@ npm ci
 npm test
 ```
 
-25/25 kiểm tra đạt: 17 logic và 8 DOM bằng jsdom. Có hồi quy nguyên văn K1–K8 và hai lời AI trong report; chuyển/huỷ/duyệt; K2/K5 chặn hàng chờ; sửa dữ kiện; đồng ý lưu và chèn HTML. Kiểm tra hẹn giờ dùng đồng hồ giả để xác nhận đặt/huỷ/reset hạn và xử lý quá hạn, không chờ thực tế 2 phút. jsdom không phải trình duyệt thật và không xác minh layout responsive hoặc focus/scroll thực tế.
+27/27 kiểm tra đạt: 17 logic và 10 DOM bằng jsdom. Có hồi quy nguyên văn K1–K8 và hai lời AI trong report; chuyển/huỷ/duyệt; K2/K5 chặn hàng chờ; sửa dữ kiện; đồng ý lưu và chèn HTML. Kiểm tra hẹn giờ dùng đồng hồ giả để xác nhận đặt/huỷ/reset hạn và xử lý quá hạn, không chờ thực tế 2 phút. jsdom không phải trình duyệt thật và không xác minh layout responsive hoặc focus/scroll thực tế.
 
 Hai ảnh đã được render và xem lại để kiểm tra bố cục. Môi trường thực hiện không có trình duyệt khả dụng; cần bấm thử một vòng trên trình duyệt trước khi demo trước lớp.
 
