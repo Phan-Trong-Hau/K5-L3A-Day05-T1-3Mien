@@ -1,6 +1,6 @@
 # Bài nộp LAB5 — T1 — Y tế · Nhóm 3 miền
 
-**Trạng thái:** §1–6 và kịch bản §7.1 đã đồng bộ với prototype. Còn xác nhận ý kiến cá nhân ở §4.3, bấm thử trên trình duyệt và ghi ca lạ sau demo (§7.2).
+**Trạng thái:** §1–6 và kịch bản §7.1 đã đồng bộ với prototype. Ý kiến cá nhân §4.3 đã ghi; còn bấm thử trên trình duyệt và ghi ca lạ sau demo (§7.2).
 **Lớp:** L3A · **Zone:** 3 · **Bàn:** 4 · **Track:** T1
 
 | Họ và Tên | Mã Học Viên | Việc đã làm |
@@ -155,7 +155,13 @@ Giữ ba nguyên tắc này để mỗi nguyên tắc trỏ tới một chỗ th
 | B — Không tự gợi ý, mọi ca đều đợi khách bấm chuyển | Khách kiểm soát từng lần chuyển | Giữ cho các ca không nguy hiểm thông thường, nhưng không áp dụng cho K1: đã có tín hiệu thai kỳ để biết cần người đánh giá, không cần hỏi nhiều câu trước chuyển |
 | C — Không tự gợi ý; K1 tự chuyển có huỷ; ca khác cho chọn chuyển; K2/K5 cảnh báo và không xếp hàng | Thể hiện cả tự làm có điều kiện, bước duyệt và việc cấm | **Bản demo đang dùng phương án này.** Đổi lại K4 có thể chậm và hết hạn vẫn chưa giải quyết; khoá AI gửi sản phẩm không bảo đảm loại bỏ mọi rủi ro y tế |
 
-**Lựa chọn cá nhân cần bổ sung:** Chưa ghi nhận lựa chọn ban đầu của từng thành viên. Hậu, Thịnh và Huy cần tự xác nhận phương án, lý do và điều đã thay đổi sau thảo luận. Bảng trên chỉ ghi phân tích phương án và chính sách đang triển khai.
+**Ý kiến ban đầu của từng thành viên:**
+
+- **Ngô Đức Thịnh:** Đề xuất cho AI gợi ý có điều kiện ở K4 sau sàng lọc, nhưng cấm ở K1/K2/K3/K7; riêng K1 tự chuyển dược sĩ ngay để khách không phải bấm thêm.
+- **Phan Trọng Hậu:** Đề xuất không cho AI tự gửi gợi ý sản phẩm; tách soạn nháp khỏi duyệt/gửi. Ban đầu chọn khách chủ động chuyển, có huỷ trước nhận, và hạn nháp hai phút.
+- **Bùi Gia Huy:** Cân nhắc giữa giảm chờ cho ca nhẹ và nguy cơ AI bỏ sót người dùng thuốc là trẻ nhỏ hoặc thai phụ; nghiêng về giữ bước dược sĩ đánh giá thay vì để AI tự quyết định đủ điều kiện gợi ý.
+
+**Cách chốt sau thảo luận:** Nhóm chọn phương án C: giữ giới hạn không tự gợi ý và bước duyệt riêng; K1 được tự chuyển có huỷ như đề xuất của Thịnh, thay cho yêu cầu khách bấm ở mọi ca trong phương án ban đầu của Hậu. Ca khác cho chọn chuyển, K2/K5 không vào hàng chờ; giữ hạn nháp hai phút. Chấp nhận K4 có thể chờ lâu hơn để giảm rủi ro gợi ý khi thiếu dữ kiện.
 
 ### 4.4 Đối chiếu hai ca trọng tâm và một ca thường
 
@@ -223,7 +229,7 @@ K4 cũng hỏi lại người dùng thuốc/tuổi và cho chọn chuyển; khô
 - `goi_y_san_pham`: AI không tự gửi; prototype chưa triển khai bước dược sĩ chọn sản phẩm. Luồng duyệt hiện tại chỉ dành cho phản hồi sàng lọc.
 - Tách thao tác mô phỏng **soạn phản hồi sàng lọc** khỏi **gửi phản hồi đã duyệt** để chứng minh bản nháp không được tự phát hành. Hai thao tác này đã được mô tả ở §4.1 và §4.5.
 
-Các mức trên khớp chính sách và lập luận §4. Ý kiến lựa chọn ban đầu của từng thành viên vẫn cần xác nhận riêng ở §4.3.
+Các mức trên khớp chính sách và lập luận §4. Ý kiến ban đầu và cách nhóm chốt được ghi ở §4.3.
 
 ### Kiểm tra và giới hạn
 
@@ -281,4 +287,4 @@ Nút **Ca thêm · Trẻ sốt** chỉ là ca phụ để minh hoạ chuyển th
 
 ### 7.2 Ca lạ thực tế sau demo
 
-**Chưa ghi nhận ca lạ.** Điền sau khi demo: tin người xem đưa · UI đã làm gì · đúng/sai so với §4 · điều nhóm thay đổi và người thực hiện. Không ghi ca dựng sẵn thành ca lạ đã nhận.
+**Chưa demo, chưa có ca lạ.** Điền sau khi demo: tin người xem đưa · UI đã làm gì · đúng/sai so với §4 · điều nhóm thay đổi và người thực hiện. Không ghi ca dựng sẵn thành ca lạ đã nhận.

@@ -63,7 +63,7 @@ Tám nút K1–K8 tương ứng tám dòng report. Nút **Ca thêm · Trẻ số
 
 Bộ lọc không hiểu đầy đủ phủ định, tiếng lóng hoặc mọi dấu hiệu y tế. Ví dụ “không khó thở” vẫn có thể kích hoạt cảnh báo; câu diễn đạt khác có thể bị bỏ sót. Ca không nhận diện được luôn đi đường hỏi lại/chuyển người, nhưng điều đó **không bảo đảm phát hiện cấp cứu**. Đây là giới hạn demo, không phải hệ thống phân loại y tế dùng thật.
 
-Câu chữ, K1–K8, quyền tool, ba nguyên tắc G1/G10/G9 và hạn demo hai phút khớp §1–6. Trình tự demo chung ở §7.1: Thịnh → Huy → Hậu → cả nhóm nhận ca lạ. Ý kiến cá nhân §4.3 cần từng người xác nhận; §7.2 chỉ ghi sau demo.
+Câu chữ, K1–K8, quyền tool, ba nguyên tắc G1/G10/G9 và hạn demo hai phút khớp §1–6. Trình tự demo chung ở §7.1: Thịnh → Huy → Hậu → cả nhóm nhận ca lạ. Ý kiến cá nhân và cách chốt đã ghi ở §4.3; §7.2 chưa demo, sẽ ghi sau buổi trình bày.
 
 ## Kiểm tra kỹ thuật
 

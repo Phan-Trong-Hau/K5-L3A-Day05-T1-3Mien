@@ -10,7 +10,7 @@
 
 **Lớp:** L3A · **Zone:** 3 · **Bàn:** 4.
 
-**Trạng thái:** §1–6 và kịch bản §7.1 đã đồng bộ với prototype; còn xác nhận ý kiến từng thành viên (§4.3), kiểm tra trình duyệt và ghi ca lạ sau demo (§7.2).
+**Trạng thái:** §1–6 và kịch bản §7.1 đã đồng bộ với prototype; đã ghi ý kiến từng thành viên (§4.3); còn kiểm tra trình duyệt và ghi ca lạ sau demo (§7.2).
 
 ## Phân công
 
@@ -53,7 +53,7 @@ Theo quy tắc track: không tự nói liều; không tự bán/gợi ý thuốc
 ## Trước khi nộp
 
 - Kiểm tra lại đóng góp thực tế của từng người trước khi nộp.
-- Mỗi thành viên xác nhận lựa chọn thật ở §4.3; bấm thử trình duyệt; ghi ca lạ ở §7.2 sau demo.
+- Bấm thử trình duyệt; sau buổi demo ghi ca lạ thực tế ở §7.2.
 - Repo công khai, nộp link theo kênh giảng viên thông báo.
 - Hạn L3A: 23:59 ngày 12/11/2026; L3B: 23:59 ngày 13/11/2026.
 

@@ -1,6 +1,6 @@
 # Phân công LAB5 — Nhóm 3 miền · L3A · T1 Y tế
 
-**Trạng thái:** §1–6 và kịch bản §7.1 đã đồng bộ với UI; 27 kiểm tra logic/DOM đạt. Còn xác nhận ý kiến cá nhân §4.3, kiểm tra trình duyệt thật và ghi ca lạ §7.2 sau demo.
+**Trạng thái:** §1–6 và kịch bản §7.1 đã đồng bộ với UI; 27 kiểm tra logic/DOM đạt. Ý kiến cá nhân §4.3 đã ghi; còn kiểm tra trình duyệt thật và ghi ca lạ §7.2 sau demo.
 
 ## Phụ trách chính
 
@@ -55,7 +55,7 @@ Người phụ trách chính tổng hợp và sửa phần mình. Cả ba cùng 
 - [x] §1–3: đã có 8 kịch bản, hai ca sâu, nguyên tắc và nội dung khớp prototype.
 - [x] §4 và §6: đủ 5 tool + 2 thao tác tách, đối chiếu K1/K2/K6, có tiêu chí và kết quả logic/DOM.
 - [x] §7.1: trình tự demo Thịnh → Huy → Hậu, khớp nút K1/K2 hiện tại.
-- [ ] Mỗi thành viên tự xác nhận lựa chọn ban đầu và lý do ở §4.3.
+- [x] §4.3 đã ghi ý kiến thật của ba thành viên, phân biệt lựa chọn ban đầu và phương án cuối.
 - [ ] Sau demo: ghi ca lạ và kết quả thực tế ở §7.2.
 - [x] Hậu: đã dựng prototype, tạo ảnh render đánh số và viết §5; logic/DOM đạt 27/27.
 - [ ] Hậu: bấm thử trên trình duyệt thật; kiểm tra responsive, focus/scroll và hẹn giờ 2 phút.
